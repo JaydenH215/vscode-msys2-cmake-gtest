@@ -1,0 +1,1 @@
+-IC:/Users/Donv/Desktop/vscode+msys2+cmake+gtest/googletest/googlemock/include -IC:/Users/Donv/Desktop/vscode+msys2+cmake+gtest/googletest/googlemock -isystem C:/Users/Donv/Desktop/vscode+msys2+cmake+gtest/googletest/googletest/include -isystem C:/Users/Donv/Desktop/vscode+msys2+cmake+gtest/googletest/googletest 

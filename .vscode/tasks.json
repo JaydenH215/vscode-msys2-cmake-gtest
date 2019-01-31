@@ -1,0 +1,32 @@
+{
+    // See https://go.microsoft.com/fwlink/?LinkId=733558
+    // for the documentation about the tasks.json format
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "build",
+            "type": "shell",
+            "command": "g++",
+            "group": "test",
+            "args": [
+                "-std=c++11",
+                "-pthread",
+                "-isystem","./googletest/googletest/include",
+                "-isystem","./googletest/googlemock/include",
+                "main.cpp",
+                "./build/lib/libgtest.a","./build/lib/libgmock.a",
+                "-o","gtest_test"
+            ]
+        },
+        {
+            "label": "run",
+            "type": "shell",
+            "command": "./gtest_test",
+            "group": "test",
+            "args": [
+                "--gtest_color=no"
+            ],
+            "dependsOn":["build"]
+        }
+    ]
+}
